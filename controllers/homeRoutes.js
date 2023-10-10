@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { Profile, User } = require('/models');
+const { Profile, User } = require('../models');
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
@@ -23,6 +23,25 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+
+
+
+router.get('/builder', withAuth, async (req, res) => {
+  try {
+    res.render('builder');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    res.render('profile');
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
