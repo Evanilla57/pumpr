@@ -15,15 +15,5 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-    if (!profileData) {
-      res.status(404).json({ message: 'No profile found with this id!' });
-      return;
-    }
-
-    res.status(200).json(profileData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 module.exports = router;
