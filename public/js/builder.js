@@ -11,7 +11,7 @@ const newFormHandler = async (event) => {
 
     //TODO: connect API
     if (firstName && lastName && age && freq && about && search && song) {
-        const response = await fetch(`/api/profile`, {
+        const response = await fetch('/api/profile', {
             method: 'POST',
             body: JSON.stringify({ firstName, lastName, age, freq, about, search, song }),
             headers: {
