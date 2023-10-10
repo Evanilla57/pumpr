@@ -27,7 +27,7 @@ router.get('/login', (req, res) => {
 
 
 
-
+//render builder page
 router.get('/builder', withAuth, async (req, res) => {
   try {
     res.render('builder');
@@ -36,6 +36,7 @@ router.get('/builder', withAuth, async (req, res) => {
   }
 });
 
+//render profile page
 router.get('/profile', withAuth, async (req, res) => {
   try {
     res.render('profile');
