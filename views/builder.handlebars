@@ -21,14 +21,22 @@
                 <label for="profile-age">How old are you?</label>
                 <input class="form-input" type="number" id="profile-age" name="profile-age" />
             </div>
+                        <div class="form-group">
+                <label for="profile-freq">How many times do you go to the gym weekly?</label>
+                <input class="form-input" type="number" id="profile-freq" name="profile-freq" />
+            </div>
             <div class="form-group">
                 <label for="profile-about">Tell us about yourself:</label>
                 <textarea class="form-input" id="profile-about" name="profile-about"></textarea>
             </div>
-            {{!-- Add drop down menu --}}
+            {{!-- TODO:Add drop down menu --}}
             <div class="form-group">
                 <label for="profile-search">What are you looking for?</label>
                 <textarea class="form-input" id="profile-search" name="profile-search"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="profile-song">What's your favorite song to play while you're at the gym?</label>
+                <textarea class="form-input" id="profile-song" name="profile-song"></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Submit</button>
