@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+
+
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -60,6 +63,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
+  console.log('logout');
   if (req.session.logged_in) {
     // Remove the session variables
     req.session.destroy(() => {
@@ -68,6 +72,13 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).end();
   }
+});
+router.get('/search', async (req, res) => {
+  console.log('search');
+
+  res.status(200);
+
+
 });
 
 module.exports = router;
