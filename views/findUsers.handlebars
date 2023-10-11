@@ -1,0 +1,23 @@
+<h1>Find Users in Your Area</h1>
+
+<!-- Search Filters -->
+<form id='user-search-form'>
+  <label for='location'>Location:</label>
+  <input type='text' id='location' name='location' />
+
+  <!--Todo- Other search filters like gender, fitness goals, etc. can be added here -->
+
+  <button type='submit'>Search</button>
+</form>
+
+<!-- Display Search Results -->
+<div id='search-results'>
+  <h2>Search Results:</h2>
+  {{#each searchResults}}
+    <div class='user-profile'>
+      <h3>{{name}}</h3>
+      <p>Location: {{location}}</p>
+      <!-- Display other user profile information here -->
+    </div>
+  {{/each}}
+</div>

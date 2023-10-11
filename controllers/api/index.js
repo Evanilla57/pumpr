@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
+
 const bingRoutes = require('./bingRoutes');
 
 router.get(
@@ -10,7 +11,9 @@ router.get(
 const BingMapsKey =
   'Au5J2-W-wm9RjOdzUylDQNJaiPua_uIVGKvz3mkQfCVvnTBPmZsuS3C8RztArOLq';
 
+
 router.use('/users', userRoutes);
+router.use('/profile', profileRoutes);
 
 router.use('/bing', bingRoutes);
 
