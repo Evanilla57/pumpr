@@ -22,6 +22,15 @@ router.get('/login', (req, res) => {
     return;
   }
 
+  // Add the /find-users route here
+  router.get('/find-users', withAuth, async (req, res) => {
+    try {
+      res.render('findUsers');
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
   res.render('login');
 });
 
