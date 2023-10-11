@@ -11,7 +11,7 @@
 <body>
   <header class="display-flex justify-space-between align-center p-2">
     <h1>
-      {{{firstName lastName}}}
+      {{{user.name}}}
     </h1>
     <!-- Only display the logout button if the user is logged in -->
     {{#if logged_in}}
@@ -31,7 +31,6 @@
     <p>{{{search}}}</p>
     <h3>My Go To Work Out Song:</h3>
     <p>{{{song}}}</p>
-        {{{ body }}}
   </main>
   <footer>
       

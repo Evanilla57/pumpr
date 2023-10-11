@@ -1,46 +1,47 @@
-<div class="row">
-    <div class="col-auto">
-        <h2>Welcome!</h2>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="row mt-4">
-    <div class="col-md-6">
-        <h3>Tell us about yourself!</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump Up Your Profile!</title>
+    <link rel="stylesheet" href="/css/jass.css">
+</head>
 
-        <form class="form new-profile-form">
-            <div class="form-group">
-                <label for="profile-first-name">First name:</label>
-                <input class="form-input" type="text" id="profile-first-name" name="profile-first-name" />
-            </div>
-            <div class="form-group">
-                <label for="profile-last-name">Last name:</label>
-                <input class="form-input" type="text" id="profile-last-name" name="profile-last-name" />
-            </div>
-            <div class="form-group">
-                <label for="profile-age">How old are you?</label>
-                <input class="form-input" type="number" id="profile-age" name="profile-age" />
-            </div>
-                        <div class="form-group">
-                <label for="profile-freq">How many times do you go to the gym weekly?</label>
-                <input class="form-input" type="number" id="profile-freq" name="profile-freq" />
-            </div>
-            <div class="form-group">
-                <label for="profile-about">Tell us about yourself:</label>
-                <textarea class="form-input" id="profile-about" name="profile-about"></textarea>
-            </div>
-            {{!-- TODO:Add drop down menu --}}
-            <div class="form-group">
-                <label for="profile-search">What are you looking for?</label>
-                <textarea class="form-input" id="profile-search" name="profile-search"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="profile-song">What's your favorite song to play while you're at the gym?</label>
-                <textarea class="form-input" id="profile-song" name="profile-song"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+<body>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h3>Hi {{user.name}}! Tell us about yourself!</h3>
+
+            <form class="form new-profile-form">
+                <div class="form-group">
+                    <label for="profile-age">How old are you?</label>
+                    <input class="form-input" type="number" id="profile-age" name="profile-age" />
+                </div>
+                <div class="form-group">
+                    <label for="profile-freq">How many times do you go to the gym weekly?</label>
+                    <input class="form-input" type="number" id="profile-freq" name="profile-freq" />
+                </div>
+                <div class="form-group">
+                    <label for="profile-about">Tell us about yourself:</label>
+                    <textarea class="form-input" id="profile-about" name="profile-about"></textarea>
+                </div>
+                {{!-- TODO:Add drop down menu --}}
+                <div class="form-group">
+                    <label for="profile-search">What are you looking for?</label>
+                    <textarea class="form-input" id="profile-search" name="profile-search"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="profile-song">What's your favorite song to play while you're at the gym?</label>
+                    <textarea class="form-input" id="profile-song" name="profile-song"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
+    <script src="/js/builder.js"></script>
+</body>
+
+</html>
