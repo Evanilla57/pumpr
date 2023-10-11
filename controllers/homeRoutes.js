@@ -39,7 +39,9 @@ router.get('/login', (req, res) => {
 //render builder page
 router.get('/builder', withAuth, async (req, res) => {
   try {
-    res.render('builder');
+    res.render('builder', {
+      user: req.session.user,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -48,8 +50,18 @@ router.get('/builder', withAuth, async (req, res) => {
 //render profile page
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    res.render('profile');
+    const userName = req.session.user;
+    console.log('username', userName);
+    const profileData = await Profile.findAll({
+      where: {
+        name: userName.email,
+      }
+    });
+    const ourProfile = profileData.map(p => p.get({ plain: true }));
+    console.log('ourProfile', ourProfile);
+    res.render('profile', {p: ourProfile[0], user: req.session.user, logged_in: req.session.logged_in});
   } catch (err) {
+    console.error('profile home get', err);
     res.status(500).json(err);
   }
 });

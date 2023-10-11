@@ -9,9 +9,11 @@ const newFormHandler = async (event) => {
 
     //TODO: connect API
     if (age && freq && about && search && song) {
+        const profileBody = JSON.stringify({ age, freq, about, search, song });
+        console.log('profileBody', profileBody);
         const response = await fetch('/api/profile', {
             method: 'POST',
-            body: JSON.stringify({age, freq, about, search, song }),
+            body: profileBody,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -19,7 +21,7 @@ const newFormHandler = async (event) => {
 
         if (response.ok) {
             window.location.href = '/profile';
-            
+
         } else {
             alert('Failed to create profile');
         }
