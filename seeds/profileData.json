@@ -1,0 +1,26 @@
+[
+    {
+      "name": "First User",
+      "age": "18",
+      "freq": "3",
+      "about": "I love mansplaining! In case you didn't know, mansplaining is when-",
+      "search": "gym crush",
+      "song": "Darude - Sandstorm"
+    },
+    {
+      "name": "Second User",
+      "age": "99",
+      "freq": "1",
+      "about": "HOW DO I TURN CAPS OFF",
+      "search": "gym crush",
+      "song": "MILES DAVIS"
+    },
+    {
+      "name": "Third User",
+      "age": "38",
+      "freq": "5",
+      "about": "I love fishing, hiking, and my dog Ryder. Ryder is also my son's name, his mother's idea. Anyway, she's not in the picture anymore. Don't ask. I'm looking to put on 10lbs of muscle. And I'm looking for a girl who can gain 10 pounds of Ryder's younger brother. My ex-wife will have to name him though. Don't ask.",
+      "search": "gym crush",
+      "song": "how about we make sweer music together lol jk... unless?",
+    }
+  ]
