@@ -7,7 +7,7 @@ const profileData = require('./profileData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
+  const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
