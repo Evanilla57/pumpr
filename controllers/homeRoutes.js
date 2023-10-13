@@ -21,20 +21,17 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-
-  // Add the /find-users route here
-  router.get('/find-users', withAuth, async (req, res) => {
-    try {
-      res.render('findUsers');
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
   res.render('login');
 });
 
-
+// Add the /find-users route here
+router.get('/find-users', withAuth, async (req, res) => {
+  try {
+    res.render('findUsers');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //render builder page
 router.get('/builder', withAuth, async (req, res) => {
@@ -55,11 +52,15 @@ router.get('/profile', withAuth, async (req, res) => {
     const profileData = await Profile.findAll({
       where: {
         name: userName.email,
-      }
+      },
     });
-    const ourProfile = profileData.map(p => p.get({ plain: true }));
+    const ourProfile = profileData.map((p) => p.get({ plain: true }));
     console.log('ourProfile', ourProfile);
-    res.render('profile', {p: ourProfile[0], user: req.session.user, logged_in: req.session.logged_in});
+    res.render('profile', {
+      p: ourProfile[0],
+      user: req.session.user,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     console.error('profile home get', err);
     res.status(500).json(err);

@@ -6,18 +6,18 @@ const withAuth = require('../utils/auth');
 
 router.get('/api/find-users', withAuth, async (req, res) => {
   try {
-    const { location } = req.query; // Retrieve the location from query parameters
+    const { email } = req.query; // Retrieve the email from query parameters
 
-    // Query users based on location
+    // Query users based on email
     const searchResults = await User.findAll({
       where: {
-        location: {
-          [Op.like]: `%${location}%`, // Use a wildcard for flexible search
+        email: {
+          [Op.like]: `%${email}%`,
         },
       },
     });
 
-    res.render('findUsers', { searchResults }); // Pass searchResults to the template
+    res.json(searchResults); // Pass searchResults to the template
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });

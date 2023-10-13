@@ -1,11 +1,11 @@
 <h1>Find Users in Your Area</h1>
 
 <!-- Search Filters -->
-<form id='user-search-form'>
-  <label for='location'>Location:</label>
-  <input type='text' id='location' name='location' />
+<form id='user-search-form' action='/api/find-users' method='GET'>
 
   <!--Todo- Other search filters like gender, fitness goals, etc. can be added here -->
+  <label for='email'>Email:</label>
+  <input type='text' id='email' name='email' />
 
   <button type='submit'>Search</button>
 </form>
@@ -16,8 +16,12 @@
   {{#each searchResults}}
     <div class='user-profile'>
       <h3>{{name}}</h3>
-      <p>Location: {{location}}</p>
+
+      <p>Email: {{email}}</p>
+      <!-- Display the email here -->
       <!-- Display other user profile information here -->
     </div>
   {{/each}}
+
 </div>
+<script src='/public/js/findUsers.js'></script>
