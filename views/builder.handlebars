@@ -1,35 +1,48 @@
 <body>
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <h3>Hi {{user.name}}! Tell us about yourself!</h3>
+    <div class="builder-page">
+        <div class="row mt-4">
+            <div class="col-md-12">
 
-            <form class="form new-profile-form">
-                <div class="form-group">
-                    <label for="profile-age">How old are you?</label>
-                    <input class="form-input" type="number" id="profile-age" name="profile-age" />
-                </div>
-                <div class="form-group">
-                    <label for="profile-freq">How many times do you go to the gym weekly?</label>
-                    <input class="form-input" type="number" id="profile-freq" name="profile-freq" />
-                </div>
-                <div class="form-group">
-                    <label for="profile-about">Tell us about yourself:</label>
-                    <textarea class="form-input" id="profile-about" name="profile-about"></textarea>
-                </div>
-                {{!-- TODO:Add drop down menu --}}
-                <div class="form-group">
-                    <label for="profile-search">What are you looking for?</label>
-                    <textarea class="form-input" id="profile-search" name="profile-search"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="profile-song">What's your favorite song to play while you're at the gym?</label>
-                    <textarea class="form-input" id="profile-song" name="profile-song"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
+
+                <form class="form new-profile-form">
+                    <h3 class="text-center text-white pb-3">Hi {{user.name}}! Tell us about yourself!</h3>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="profile-age">How old are you?</label>
+                                <input class="form-input" type="number" id="profile-age" name="profile-age" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="profile-freq">How many times do you go to the gym weekly?</label>
+                                <input class="form-input" type="number" id="profile-freq" name="profile-freq" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            {{!-- TODO:Add drop down menu --}}
+                            <div class="form-group">
+                                <label for="profile-search">What are you looking for?</label>
+                                <textarea class="form-input" id="profile-search" name="profile-search"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="profile-song">What's your favorite song to play while you're at the
+                                    gym?</label>
+                                <textarea class="form-input" id="profile-song" name="profile-song"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group px-3">
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
     <script src="/js/builder.js"></script>
 </body>

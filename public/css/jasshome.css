@@ -3,3 +3,22 @@
     height: 50px;
     background-color: red;
 }
+
+.logged-in-home{
+    background-image: url("./assets/weightscouple.png");
+}
+
+.logged-in-home .row {
+    height: 100%;
+    align-items: center;
+}
+
+.logged-in-home .row>.col-md-12 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.logged-in-home .row>.col-md-12 a {
+    color: rgb(247, 183, 5);
+}
