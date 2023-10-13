@@ -1,7 +1,7 @@
 [
     {
       "name": "First User",
-      "age": "18",
+      "age": "20",
       "freq": "3",
       "about": "I love mansplaining! In case you didn't know, mansplaining is when-",
       "search": "gym crush",
@@ -9,7 +9,7 @@
     },
     {
       "name": "Second User",
-      "age": "99",
+      "age": "42",
       "freq": "1",
       "about": "HOW DO I TURN CAPS OFF",
       "search": "spotter",
@@ -22,5 +22,22 @@
       "about": "I love fishing and I love my dog Ryder. Ryder's also my son's name, his mother's idea. Don't ask. I'm looking to put on 10lbs of muscle. How about I help you put on 10 pounds of Ryder's new baby brother?",
       "search": "gym crush",
       "song": "how about we make sweet music together lol jk... unless?"
+    },
+    {
+      "name": "Fourth User",
+      "age": "28",
+      "freq": "6",
+      "about": "Enjoy hiking, going to gym, and reading",
+      "search": "spotter",
+      "song": "Drake - Fear Of Heights"
+    },
+    {
+      "name": "Fifth User",
+      "age": "22",
+      "freq": "2",
+      "about": "#trenythingispossible",
+      "search": "gym crush",
+      "song": "Korn - Falling Away From Me"
     }
+
   ]
