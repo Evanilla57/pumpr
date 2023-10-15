@@ -5,9 +5,10 @@ document
 
     // Get the email input value
     const email = document.querySelector('#email').value;
-
+    const emailEncoded = encodeURIComponent(email);
     // Make a Fetch request to your Express route with the email as a query parameter
-    const response = await fetch(`/api/find-users?email=${email}`);
+    const response = await fetch(`/api/find-users/${emailEncoded}`);
+    console.log(response);
 
     if (response.ok) {
       // Parse the response to get the search results (assuming it returns JSON)
