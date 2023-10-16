@@ -51,20 +51,18 @@ router.get('/profile', withAuth, async (req, res) => {
     console.log('username', userName);
     const profileData = await Profile.findAll({
       where: {
-        name: userName.email,
-      },
+        name: userName.name,
+      }
     });
-    const ourProfile = profileData.map((p) => p.get({ plain: true }));
+    console.log('profileData', profileData);
+    const ourProfile = profileData.map(p => p.get({ plain: true }));
     console.log('ourProfile', ourProfile);
-    res.render('profile', {
-      p: ourProfile[0],
-      user: req.session.user,
-      logged_in: req.session.logged_in,
-    });
+    res.render('profile', {p: ourProfile[0], user: req.session.user, logged_in: req.session.logged_in});
   } catch (err) {
     console.error('profile home get', err);
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
