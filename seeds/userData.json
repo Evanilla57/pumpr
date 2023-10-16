@@ -1,17 +1,27 @@
 [
   {
-    "name": "First User",
+    "name": "Ronald McDizzle",
     "email": "firstuser@bootcamp.com",
     "password": "password12345!"
   },
   {
-    "name": "Second User",
+    "name": "Horton Morton",
     "email": "seconduser@bootcamp.com",
     "password": "password12345!"
   },
   {
-    "name": "Third User",
+    "name": "Kyle Thunderguns",
     "email": "thirduser@bootcamp.com",
+    "password": "password12345!"
+  },
+  {
+    "name": "Jacob Smith",
+    "email": "fourthuser@bootcamp.com",
+    "password": "password12345!"
+  },
+  {
+    "name": "Swollga Higgenbottom",
+    "email": "fifthuser@bootcamp.com",
     "password": "password12345!"
   }
 ]
