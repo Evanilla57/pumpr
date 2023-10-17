@@ -21,7 +21,7 @@ h3 {
 }
 
 .form {
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -80,6 +80,7 @@ button.btn-primary:hover {
 
 .builder-page {
     background-image: url("./assets/exercisecouple.png");
+    height: auto !important;
 }
 
 .form-row {
