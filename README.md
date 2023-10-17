@@ -20,4 +20,11 @@ Pumpr is where you can meet your gym crush or friendly gym partner. With Pumpr y
 You have to sign up to access the site. You will also need to build your profile so people can get to know you better. Lastly,
 you mingle with other other fitness enthusiasts and gain new experiences.
 
-## 
+## Future Development 
+
+* Browse other user profiles
+* Allow users to filter user results with user interests
+* Add music player
+* Upload photos and videos
+* Messasing feature
+* Allow question 
