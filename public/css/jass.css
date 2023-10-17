@@ -14,7 +14,8 @@ html {
 
 .pic-home-page,
 .builder-page,
-.logged-in-home {
+.logged-in-home,
+.profile-image {
   background-color: #000000;
   color: rgb(247, 183, 5);
   background-size: cover;
