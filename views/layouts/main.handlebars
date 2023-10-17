@@ -1,5 +1,6 @@
 <html lang='en'>
 
+
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -41,13 +42,50 @@
     </main>
     <footer>
 
-    </footer>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Pumpr</title>
+  <link rel='stylesheet' href='/css/styles.css'>
+  <link rel="stylesheet" href="/css/jassbuilder.css">
+  <link rel='stylesheet' href='/css/jassprofile.css'>
+  <link rel='stylesheet' href='/css/jass.css'>
+
+</head>
+
+<body>
+  <header class='display-flex justify-space-between align-center'>
+
+
+
 
     <!-- Only include the logout script if the user is logged in -->
     
-    {{#if logged_in}}
-      <script src='/js/logout.js'></script>
+
+
+    <!-- Only display the logout button if the user is logged in -->
+
+   {{#if logged_in}}
+    <nav>
+      <button class='btn' id='logout'>logout</button>
+    </nav>
     {{/if}}
-  </body>
+  </header>
+  <main class='picmain'>
+    <div class="container-fluid">
+
+      {{{body}}}
+    </div>
+
+  </main>
+  <footer>
+
+  </footer>
+
+  <!-- Only include the logout script if the user is logged in -->
+  {{#if logged_in}}
+  <script src='/js/logout.js'></script>
+  {{/if}}
+</body>
 
 </html>

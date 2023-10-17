@@ -1,23 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const { User, Sequelize } = require('../models');
+const { User } = require('../../models');
+const Sequelize = require('sequelize');
 const Op = Sequelize.Op; // Import Sequelize's "Op" operator for query
-const withAuth = require('../utils/auth');
+const withAuth = require('../../utils/auth');
 
-router.get('/api/find-users', withAuth, async (req, res) => {
+router.get('/:email', withAuth, async (req, res) => {
   try {
-    const { location } = req.query; // Retrieve the location from query parameters
-
-    // Query users based on location
-    const searchResults = await User.findAll({
+    const { email } = req.params; // Retrieve the email from query parameters
+    console.log(email);
+    // Query users based on email
+    const result = await User.findOne({
       where: {
-        location: {
-          [Op.like]: `%${location}%`, // Use a wildcard for flexible search
+        email: {
+          [Op.like]: `%${email}%`,
         },
       },
     });
+    if (!result) {
+      res.status(404).json({ message: 'no user found with this email' });
+    }
+    const user = result.get({ plain: true} );
+    console.log('user', user);
 
-    res.render('findUsers', { searchResults }); // Pass searchResults to the template
+    res.json(user); // Pass result to the template
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });

@@ -1,4 +1,5 @@
-const newFormHandler = async (event) => {
+document.addEventListener('DOMContentLoaded', () => {
+  const newFormHandler = async (event) => {
     event.preventDefault();
 
     const age = document.querySelector('#profile-age').value.trim();
@@ -9,25 +10,25 @@ const newFormHandler = async (event) => {
 
     //TODO: connect API
     if (age && freq && about && search && song) {
-        const profileBody = JSON.stringify({ age, freq, about, search, song });
-        console.log('profileBody', profileBody);
-        const response = await fetch('/api/profile', {
-            method: 'POST',
-            body: profileBody,
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
+      const profileBody = JSON.stringify({ age, freq, about, search, song });
+      console.log('profileBody', profileBody);
+      const response = await fetch('/api/profile', {
+        method: 'POST',
+        body: profileBody,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-        if (response.ok) {
-            window.location.href = '/profile';
-
-        } else {
-            alert('Failed to create profile');
-        }
+      if (response.ok) {
+        window.location.href = '/profile';
+      } else {
+        alert('Failed to create profile');
+      }
     }
-};
+  };
 
-document
+  document
     .querySelector('.new-profile-form')
     .addEventListener('submit', newFormHandler);
+});

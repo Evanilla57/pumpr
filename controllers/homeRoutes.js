@@ -22,20 +22,17 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-
-  // Add the /find-users route here
-  router.get('/find-users', withAuth, async (req, res) => {
-    try {
-      res.render('findUsers');
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
   res.render('login');
 });
 
-
+// Add the /find-users route here
+router.get('/find-users', withAuth, async (req, res) => {
+  try {
+    res.render('findUsers');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //render builder page
 router.get('/builder', withAuth, async (req, res) => {
@@ -48,6 +45,29 @@ router.get('/builder', withAuth, async (req, res) => {
   }
 });
 
+//render individual user
+router.get('/profile/:id', withAuth, async (req, res) => {
+  try {
+    console.log(req.params.name);
+    const profileData = await Profile.findOne({
+      where: {
+        user_id: req.params.id,
+      },
+      include: [
+        {
+          model: User
+        }
+      ]
+    });
+    const profile = profileData.get({ plain: true });
+    console.log(profile);
+    res.render('profile', { p: profile });
+  } catch (err) {
+    console.error('profile home get', err);
+    res.status(500).json(err);
+  }
+});
+
 //render profile page
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -55,16 +75,23 @@ router.get('/profile', withAuth, async (req, res) => {
     console.log('username', userName);
     const profileData = await Profile.findAll({
       where: {
-        name: userName.email,
+        name: userName.name,
       }
     });
+    console.log('profileData', profileData);
     const ourProfile = profileData.map(p => p.get({ plain: true }));
     console.log('ourProfile', ourProfile);
-    res.render('profile', {p: ourProfile[0], user: req.session.user, logged_in: req.session.logged_in});
+    res.render('profile', { p: ourProfile[0], user: req.session.user, logged_in: req.session.logged_in });
   } catch (err) {
     console.error('profile home get', err);
     res.status(500).json(err);
   }
 });
+/**
+ * /profile/:name
+ * 
+ * FETCH /profile/evan%griggs
+ */
+
 
 module.exports = router;
