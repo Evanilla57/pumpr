@@ -1,88 +1,59 @@
 <body>
-  <main>
-
-<<<<<<< Updated upstream
-
-  
-
-    <main class="profile-image">
-      <div id="map"></div>
-      <div class="profile-row">
-        <div class="profile-details-box">
+    <main class='profile-image'>
+      <h2 class='mb-3 text-center'>{{user.name}}</h2>
+      <div class='profile-row'>
+        <div class='profile-details-box'>
           <h3>Age:</h3>
           <p>{{p.age}}</p>
         </div>
-        <div class="profile-details-box">
+        <div class='profile-details-box'>
           <h3>Pumps Per Week:</h3>
           <p>{{p.freq}}</p>
         </div>
       </div>
-      <div class="profile-row">
-        <div class="profile-details-box">
+      <div class='profile-row'>
+        <div class='profile-details-box'>
           <h3>About Me:</h3>
           <p>{{p.about}}</p>
         </div>
-        <div class="profile-details-box">
+        <div class='profile-details-box'>
           <h3>I'm Looking For:</h3>
           <p>{{p.search}}</p>
         </div>
       </div>
-      <div class="profile-details-box mx-auto">
+      <div class='profile-details-box mx-auto'>
         <h3>My Go To Work Out Song:</h3>
         <p>{{p.song}}</p>
       </div>
-
-
-      
+<div id='map' ></div>
     </main>
 
-    <script>
+
+<!-- Map -->
+<script>
     var map = L.map('map');
     map.setView([51.505, -0.09], 13);
-=======
-    <script>
-      var map = L.map('map');
-      map.setView([51.505, -0.09], 13);
->>>>>>> Stashed changes
-
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
-
-      navigator.geolocation.watchPosition(success, error);
-
-      let marker, circle, zoomed;
-
-      function success(pos) {
-        const lat = pos.coords.latitude;
-        const long = pos.coords.longitude;
-        const accuracy = pos.coords.accuracy;
-
-        if (marker) {
-          map.removeLayer(marker);
-          map.removeLayer(circle);
-        }
-
-        marker = L.marker([lat, long]).addTo(map);
-        circle = L.circle([lat, long], { radius: accuracy }).addTo(map);
-
-        if (!zoomed) {
-          zoomed = map.fitBounds(circle.getBounds());
-        }
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+    navigator.geolocation.watchPosition(success, error);
+    let marker, circle, zoomed;
+    function success(pos) {
+      const lat = pos.coords.latitude;
+      const long = pos.coords.longitude;
+      const accuracy = pos.coords.accuracy;
+      if (marker) {
+        map.removeLayer(marker);
+        map.removeLayer(circle);
       }
-
-      function error(err) {
-        if (err.code === 1) {
-          alert('Please allow geolocation access');
-        } else {
-          alert('Cannot access location');
-        }
+      marker = L.marker([lat, long]).addTo(map);
+      circle = L.circle([lat, long], { radius: accuracy }).addTo(map);
+      if (!zoomed) {
+        zoomed = map.fitBounds(circle.getBounds());
       }
-<<<<<<< Updated upstream
     }
-
     function error(err) {
       if (err.code === 1) {
         alert('Please allow geolocation access');
@@ -91,48 +62,10 @@
       }
     }
   </script>
-=======
-    </script>
+
     <!-- Only include the logout script if the user is logged in -->
     {{#if logged_in}}
     <script src='/js/logout.js'></script>
-    {{/if}}
-
-    <main class="profile-image">
-      <h2 class="mb-3 text-center">{{user.name}}</h2>
-      <div class="profile-row">
-        <div class="profile-details-box">
-          <h3>Age:</h3>
-          <p>{{p.age}}</p>
-        </div>
-        <div class="profile-details-box">
-          <h3>Pumps Per Week:</h3>
-          <p>{{p.freq}}</p>
-        </div>
-      </div>
-      <div class="profile-row">
-        <div class="profile-details-box">
-          <h3>About Me:</h3>
-          <p>{{p.about}}</p>
-        </div>
-        <div class="profile-details-box">
-          <h3>I'm Looking For:</h3>
-          <p>{{p.search}}</p>
-        </div>
-      </div>
-      <div class="profile-details-box mx-auto">
-        <h3>My Go To Work Out Song:</h3>
-        <p>{{p.song}}</p>
-      </div>
-
-
-
-    </main>
->>>>>>> Stashed changes
-
-    <!-- Only include the logout script if the user is logged in -->
-    {{#if logged_in}}
-    <script src="/js/logout.js"></script>
     {{/if}}
 
 
