@@ -10,16 +10,20 @@ router.get('/:email', withAuth, async (req, res) => {
     const { email } = req.params; // Retrieve the email from query parameters
     console.log(email);
     // Query users based on email
-    const searchResults = await User.findAll({
+    const result = await User.findOne({
       where: {
         email: {
           [Op.like]: `%${email}%`,
         },
       },
     });
-    console.log('Search Results:', searchResults);
+    if (!result) {
+      res.status(404).json({ message: 'no user found with this email' });
+    }
+    const user = result.get({ plain: true} );
+    console.log('user', user);
 
-    res.json(searchResults); // Pass searchResults to the template
+    res.json(user); // Pass result to the template
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });

@@ -4,11 +4,13 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    console.log(req.session.user.email);
+    console.log('before');
+    console.log(req.session);
+    console.log('after');
     const newProfile = await Profile.create({
       ...req.body,
-      user_id: req.session.user_id,
-      name: req.session.user.email,
+      user_id: req.session.user.id,
+      name: req.session.user.name,
     });
 
     res.status(200).json(newProfile);

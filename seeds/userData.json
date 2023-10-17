@@ -1,25 +1,30 @@
 [
   {
+    "id": 1,
     "name": "Ronald McDizzle",
     "email": "firstuser@bootcamp.com",
     "password": "password12345!"
   },
   {
+    "id": 2,
     "name": "Horton Morton",
     "email": "seconduser@bootcamp.com",
     "password": "password12345!"
   },
   {
+    "id": 3,
     "name": "Kyle Thunderguns",
     "email": "thirduser@bootcamp.com",
     "password": "password12345!"
   },
   {
+    "id": 4,
     "name": "Jacob Smith",
     "email": "fourthuser@bootcamp.com",
     "password": "password12345!"
   },
   {
+    "id": 5,
     "name": "Swollga Higgenbottom",
     "email": "fifthuser@bootcamp.com",
     "password": "password12345!"
