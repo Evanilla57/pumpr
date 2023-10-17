@@ -6,6 +6,7 @@
 
                 <form class="form new-profile-form">
                     <h3 class="text-center text-white pb-3">Hi {{user.name}}! Tell us about yourself!</h3>
+                    
                     <div class="form-row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -20,7 +21,14 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="profile-about">Tell us about yourself:</label>
+                                <textarea class="form-input" id="profile-about" name="profile-about" ></textarea>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             {{!-- TODO:Add drop down menu --}}
                             <div class="form-group">
@@ -28,11 +36,13 @@
                                 <textarea class="form-input" id="profile-search" name="profile-search"></textarea>
                             </div>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="profile-song">What's your favorite song to play while you're at the
                                     gym?</label>
-                                <textarea class="form-input" id="profile-song" name="profile-song"></textarea>
+                                <input class="form-input" type="input" id="profile-song" name="profile-song"></input>
                             </div>
                         </div>
                     </div>
