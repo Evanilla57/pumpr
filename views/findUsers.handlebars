@@ -1,14 +1,24 @@
-<h1>Find Users in Your Area</h1>
+<body>
+  <link rel='stylesheet' href='/css/jassfind.css'>
+  <link rel='stylesheet' href='/css/jass.css'>
 
-<!-- Search Filters -->
-<form id='user-search-form' method='GET'>
+  <div class="find-users">
 
-  <!--Todo- Other search filters like gender, fitness goals, etc. can be added here -->
-  <label for='email'>Email:</label>
-  <input type='text' id='email' name='email' />
 
-  <button type='submit'>Search</button>
-</form>
-
-</div>
-<script src='/js/findUsers.js'></script>
+    <!-- Search Filters -->
+    <div class="user-search-form">
+      <h1>Find Users in Your Area</h1>
+      <form id='user-search-form' method='GET'>
+        <!--Todo- Other search filters like gender, fitness goals, etc. can be added here -->
+        <div class="form-group">
+          <label for='email'>Email:</label>
+          <input class="form-input" type='text' id='email' name='email' />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type='submit'>Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src='/js/findUsers.js'></script>
+</body>

@@ -41,10 +41,10 @@ app.set('view engine', 'handlebars');
 
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.engine('handlebars', exphbs({ extended: true}));
+app.engine('handlebars', exphbs({ extended: true }));
 app.set('view engine', 'handlebars');
 
 
