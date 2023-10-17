@@ -87,11 +87,7 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-/**
- * /profile/:name
- * 
- * FETCH /profile/evan%griggs
- */
+
 
 
 module.exports = router;

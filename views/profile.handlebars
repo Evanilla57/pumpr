@@ -1,33 +1,36 @@
 <body>
-  <main>
-    <main class="profile-image">
-      <h2 class="mb-3 text-center">{{user.name}}</h2>
-      <div class="profile-row">
-        <div class="profile-details-box">
+    <main class='profile-image'>
+      <h2 class='mb-3 text-center'>{{user.name}}</h2>
+      <div class='profile-row'>
+        <div class='profile-details-box'>
           <h3>Age:</h3>
           <p>{{p.age}}</p>
         </div>
-        <div class="profile-details-box">
+        <div class='profile-details-box'>
           <h3>Pumps Per Week:</h3>
           <p>{{p.freq}}</p>
         </div>
       </div>
-      <div class="profile-row">
-        <div class="profile-details-box">
+      <div class='profile-row'>
+        <div class='profile-details-box'>
           <h3>About Me:</h3>
           <p>{{p.about}}</p>
         </div>
-        <div class="profile-details-box">
+        <div class='profile-details-box'>
           <h3>I'm Looking For:</h3>
           <p>{{p.search}}</p>
         </div>
       </div>
-      <div class="profile-details-box mx-auto">
+      <div class='profile-details-box mx-auto'>
         <h3>My Go To Work Out Song:</h3>
         <p>{{p.song}}</p>
       </div>
+<div id='map' ></div>
+    </main>
 
-    <script>
+
+<!-- Map -->
+<script>
     var map = L.map('map');
     map.setView([51.505, -0.09], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -60,11 +63,9 @@
     }
   </script>
 
-    </main>
-
     <!-- Only include the logout script if the user is logged in -->
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+    <script src='/js/logout.js'></script>
     {{/if}}
 
 
