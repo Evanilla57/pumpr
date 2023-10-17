@@ -1,47 +1,5 @@
 <html lang='en'>
 
-
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <title>Map User Location</title>
-    <link rel='stylesheet' href='/css/styles.css' />
-    <link rel='stylesheet' href='/css/jass.css' />
-    <link
-      rel='stylesheet'
-      href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'
-      integrity='sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY='
-      crossorigin=''
-    />
-
-    <script
-      src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
-      integrity='sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo='
-      crossorigin=''
-    ></script>
-  </head>
-
-  <body>
-    <header class='display-flex justify-space-between align-center p-2'>
-      <h1 class='center-text'>
-        Welcome to Pumpr
-      </h1>
-
-      <!-- Only display the logout button if the user is logged in -->
-      {{#if logged_in}}
-        <nav>
-          <button class='btn' id='logout'>logout</button>
-        </nav>
-      {{/if}}
-    </header>
-    <main class='container container-fluid mt-5'>
-      <p class='center-text'>
-        Find Your Next Gym Crush!
-      </p>
-      {{{body}}}
-    </main>
-    <footer>
-
 <head>
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
