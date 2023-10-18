@@ -28,7 +28,7 @@ router.get('/login', (req, res) => {
 // Add the /find-users route here
 router.get('/find-users', withAuth, async (req, res) => {
   try {
-    res.render('findUsers');
+    res.render('findUsers', { logged_in: req.session.logged_in } );
   } catch (err) {
     res.status(500).json(err);
   }
@@ -39,6 +39,7 @@ router.get('/builder', withAuth, async (req, res) => {
   try {
     res.render('builder', {
       user: req.session.user,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -61,7 +62,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
     });
     const profile = profileData.get({ plain: true });
     console.log(profile);
-    res.render('profile', { p: profile });
+    res.render('profile', { p: profile, logged_in: req.session.logged_in });
   } catch (err) {
     console.error('profile home get', err);
     res.status(500).json(err);
