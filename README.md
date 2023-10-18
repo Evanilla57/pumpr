@@ -19,7 +19,12 @@ Pumpr is where you can meet your gym crush or friendly gym partner. With Pumpr y
 
 ## How to install
 
-
+* npm i nodemon
+* mysql -u root -p
+* SOURCE db/schema.sql
+* quit
+* npm run seed
+* npm start
 
 ## How to use Pumpr
 
@@ -28,11 +33,17 @@ you mingle with other other fitness enthusiasts and gain new experiences.
 
 ## Credits
 
+### Collaborators
 Evan Griggs - https://github.com/Evanilla57
 Stephany P - https://github.com/splacito22
 Makayla Russell - https://github.com/makandcheese04
 Laura Tavira - https://github.com/taviral55
 Edward Salgado - https://github.com/esalgado12329
+
+### Tools
+https://www.bezkoder.com/node-js-express-sequelize-mysql/
+https://kinsta.com/blog/javascript-libraries/
+https://www.openstreetmap.org/copyright
 
 ## Future Development 
 
