@@ -13,9 +13,13 @@ Pumpr is where you can meet your gym crush or friendly gym partner. With Pumpr y
 * Include what muscle groups your targeting so you don't have to compromise your routine
 * Goals in the gym
 
-## Walkthrough
+## Demo Photos
 
-
+* https://ucrvirtfsfpt0-4pe5930.slack.com/files/U05DBEY7E12/F0616L4K7CP/image.png
+* https://ucrvirtfsfpt0-4pe5930.slack.com/files/U05DBEY7E12/F061PKP29A8/image.png
+* https://ucrvirtfsfpt0-4pe5930.slack.com/files/U05DBEY7E12/F062A6CRFK2/image.png
+* https://ucrvirtfsfpt0-4pe5930.slack.com/files/U05DBEY7E12/F062A6E5XA4/image.png
+* https://ucrvirtfsfpt0-4pe5930.slack.com/files/U05DBEY7E12/F0616LBHXL7/image.png
 
 ## How to install
 
@@ -34,16 +38,16 @@ you mingle with other other fitness enthusiasts and gain new experiences.
 ## Credits
 
 ### Collaborators
-Evan Griggs - https://github.com/Evanilla57
-Stephany P - https://github.com/splacito22
-Makayla Russell - https://github.com/makandcheese04
-Laura Tavira - https://github.com/taviral55
-Edward Salgado - https://github.com/esalgado12329
+* Evan Griggs - https://github.com/Evanilla57
+* Stephany P - https://github.com/splacito22
+* Makayla Russell - https://github.com/makandcheese04
+* Laura Tavira - https://github.com/taviral55
+* Edward Salgado - https://github.com/esalgado12329
 
-### Tools
-https://www.bezkoder.com/node-js-express-sequelize-mysql/
-https://kinsta.com/blog/javascript-libraries/
-https://www.openstreetmap.org/copyright
+### Technologies used
+* https://www.bezkoder.com/node-js-express-sequelize-mysql/
+* https://kinsta.com/blog/javascript-libraries/
+* https://www.openstreetmap.org/copyright
 
 ## Future Development 
 
