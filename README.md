@@ -1,5 +1,7 @@
 # Pumpr
 
+Pumpr a dating app for fitness enthusiats
+
 ## A web app designed to connect local fitness enthusiasts
 
 Finding other people passionate about fitness can be difficult. I can be especially difficult if you are a bit timid.
@@ -15,10 +17,22 @@ Pumpr is where you can meet your gym crush or friendly gym partner. With Pumpr y
 
 
 
+## How to install
+
+
+
 ## How to use Pumpr
 
 You have to sign up to access the site. You will also need to build your profile so people can get to know you better. Lastly,
 you mingle with other other fitness enthusiasts and gain new experiences.
+
+## Credits
+
+Evan Griggs - https://github.com/Evanilla57
+Stephany P - https://github.com/splacito22
+Makayla Russell - https://github.com/makandcheese04
+Laura Tavira - https://github.com/taviral55
+Edward Salgado - https://github.com/esalgado12329
 
 ## Future Development 
 
@@ -27,4 +41,4 @@ you mingle with other other fitness enthusiasts and gain new experiences.
 * Add music player
 * Upload photos and videos
 * Messasing feature
-* Allow question 
+* Allow questions 
