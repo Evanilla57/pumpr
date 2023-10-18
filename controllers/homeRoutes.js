@@ -62,7 +62,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
     });
     const profile = profileData.get({ plain: true });
     console.log(profile);
-    res.render('profile', { p: profile, logged_in: req.session.logged_in });
+    res.render('profile', { p: profile, user: req.session.user, logged_in: req.session.logged_in });
   } catch (err) {
     console.error('profile home get', err);
     res.status(500).json(err);
