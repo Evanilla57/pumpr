@@ -53,7 +53,7 @@ Once the app is open, users can:
 
 ## Links
 
-Link to deployed website: 
+Link to deployed website: https://pumpr-de6975ce74ef.herokuapp.com/profile
 Link to repository: https://github.com/Evanilla57/pumpr
 
 ## Collaborators
@@ -68,6 +68,7 @@ Link to repository: https://github.com/Evanilla57/pumpr
 * https://www.bezkoder.com/node-js-express-sequelize-mysql/
 * https://kinsta.com/blog/javascript-libraries/
 * https://www.openstreetmap.org/copyright
+* http://www.heroku.com/
 * The Coding Boot Camp at UCR Extension:
 UCR-VIRT-FSF-PT-06-2023-U-LOLC\14-MVC\01-Activities\13-Ins_Custom-Helpers
 * The Coding Boot Camp at UCR Extension: 
